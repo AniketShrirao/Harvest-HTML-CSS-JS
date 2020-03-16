@@ -228,24 +228,31 @@
         <ul class="portfolios">
          <li class="portfolio">
             <figure>
-              <img src ="assets/images/OurLatest Works/CaseStudy_Sziget.jpg" alt="CaseStudy Sziget">
+              <img src ="assets/images/OurLatest Works/CaseStudy_Sziget.jpg" alt="CaseStudySziget">
             </figure>
          </li>
          <li class="portfolio">
             <figure>
-              <img src ="assets/images/OurLatest Works/CaseStudy_Fishpools.jpg" alt="CaseStudy FishPool">
+              <img src ="assets/images/OurLatest Works/CaseStudy_Fishpools.jpg" alt="CaseStudyFishPool">
             </figure>
          </li>
           <li class="portfolio">
             <figure>
-              <img src ="assets/images/OurLatest Works/Vanquis-homepage-2.jpg" alt="Vanquis Hompage">
+              <img src ="assets/images/OurLatest Works/Vanquis-homepage-2.jpg" alt="VanquisHompage">
             </figure>
           </li>
           <li class="portfolio">
            <figure>
-              <img src ="assets/images/OurLatest Works/CaseStudy_SunLife-2.jpg" alt="CaseStudy Sunlife">
+              <img src ="assets/images/OurLatest Works/CaseStudy_SunLife-2.jpg" alt="CaseStudySunlife">
             </figure>
           </li>
+        </ul>
+        <ul class="portfolio-lightbox">
+         <li class="lightbox">
+            <figure>
+              <img src="assets/images/OurLatest Works/CaseStudy_Sziget.jpg" alt="CaseStudySziget">
+            </figure>
+         </li>
         </ul>
       </div>
     </section>
@@ -361,13 +368,57 @@
     <!--get-in-touch section start-->
     <section class="get-in-touch">      
       <div class="wrapper">
-        
+        <form action="#FIXME">
+          <div class="form-groups">
+            <div class="form-group">
+              <label for="enquiries">what are you looking for&quest;</label>
+              <select id="enquiries">
+                <option value="Business enquiry" selected>Business enquiry</option>
+                <option value="Sales enquiry">Sales enquiry</option>
+                <option value="Looking to join the team">Looking to join the team</option>
+                <option value="Graduate Programmes">Graduate programmes</option>
+                <option value="Internships">Internships</option>
+              </select>
+              <span class="error">error</span>
+            </div>
+            <div class="form-group">
+              <label for="fullname">Full name</label>
+              <input type="text" id="fullname" maxlength="40">
+              <span class="error">error</span>
+            </div>
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input type="text" id="email" maxlength="40">
+              <span class="error">error</span>
+            </div>
+            <div class="form-group">
+              <label for="company">Company</label>
+              <input type="text" id="company" maxlength="100">
+              <span class="error">error</span>
+            </div>
+          </div>
+          <div class="form-controls">
+            <div class="form-control">
+              <label for="message">Your Message</label>
+              <textarea id="message" cols="45" rows="5" maxlength="400"></textarea>
+              <span class="error">error</span>
+            </div>
+            <div class="form-control">
+              <input type="checkbox" id="TermsandCondition" value="true">
+              <label for="TermsandCondition">I have read and agree to the <a href="#FIXME"> Terms &amp; Conditions</a> and <a href="#FIXME">Privacy Policy</a></label>
+              <span class="error">error</span>
+            </div>
+            <p>By submitting this contact form you are giving us permission to email you about your questions or requests.</p>
+            <div class="form-control">
+              <input type="submit" id="submit" value="Send">
+            </div>
+          </div>
+        </form>
       </div>
     </section>
     <!--get-in-touch section end-->
     </main>
     <!--main section end-->
-
     <!--footer section start-->
     <footer>      
 
