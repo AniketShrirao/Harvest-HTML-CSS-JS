@@ -341,6 +341,76 @@ h1 img { width: 40%; }
   text-transform: uppercase;
 }
 
+.serivces {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.serivces li {
+  cursor: pointer;
+  transition: all .4s ease-in-out;
+}
+
+.serivce { flex-basis: 20%; }
+
+.serivce:nth-child(5)  figure {
+  margin-top: 20px;
+  margin-bottom: 17px;
+}
+
+.serivce span {
+  display: block;
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 13px;
+  padding-top: 20px;
+  font-weight: 600;
+  color: #777;
+  letter-spacing: 0.5px;
+}
+
+.serivce img {
+  width: 57%;
+}
+
+.serivce-icon  {
+  display: flex;
+  flex-direction: column;
+}
+
+.serivce-icon a {
+  margin-top: 38px;
+  text-indent: -9999px;
+}
+
+.serivce-icon a:before {
+  content: "\f061";
+  color: var(--primary-color);
+  font-family: FontAwesome;
+  font-size: 25px;
+  float: right;
+  margin-right: 33px;
+  text-indent: 0;
+}
+
+.serivce-icon span {
+  margin-top: 45px;
+  display: block;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color:#777;
+  letter-spacing: 0.5px;
+}
+
+.serivces li:hover {
+  transform: scale(1.1);
+  transition: all ease-in-out;
+}
+
+.serivces li:hover span {
+  color: var(--primary-color);
+}
 
  /*=================================
   our-services styling ends here
