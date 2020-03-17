@@ -100,7 +100,7 @@ li {
 /*for wrapper*/
 .wrapper {
   max-width: 1360px;
-  width: 86%; 
+  width: 60%; 
   margin: 0 auto;
 }
 
@@ -108,10 +108,12 @@ li {
   Header styling starts here
 =================================*/
 
-
-
-
-
+header .wrapper { 
+  width: 96%; 
+  padding: 23px 0;
+  display: flex;
+  justify-content: space-between;
+}
 
 /*=================================
   Header styling ends here
