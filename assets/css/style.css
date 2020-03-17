@@ -203,24 +203,121 @@ h1 img { width: 40%; }
   transform: translateX(-100%);
 }
 
+.slide {
+  width: 100%;
+  min-width: 100%;
+}
 
+.slider-content {
+  width: 48%;
+  padding: 14px 1% 13px;
+  background-color: var(--primary-color);
+  color: #fff;
+  letter-spacing: 1px;
+  position: absolute;
+  right: 0%;
+  top: 63%;
+  word-spacing: -2px;
+}
+
+.slider-content span {
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.slider-content p { font-size: 14px; }
+
+.angle-right {
+  margin: 10px 2.5%;
+  padding: 8.5px 8.5px;
+  background: #fff;
+  color: var(--primary-color);
+  font-size: 9.8px;
+  font-weight: 700;
+  display: flex;
+  line-height: 1;
+  position: absolute;
+  right: 40.7%;
+  top: 80%;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.angle-right::after {
+  content: '\f105';
+  margin:0 5px;
+  font-family: FontAwesome;
+  font-size: 12px;
+}
+
+.angle-right:hover {
+  background: var(--primary-color);
+  color: #fff;
+  transition: all .3s ease;
+}
+
+.btn {
+  width: auto;
+  padding: 5px 10px;
+  cursor: pointer;
+  color: white;
+  font-size: 15px;
+  position: absolute;
+  top: 38%;
+  transition: 0.6s ease;
+  text-indent: -9999px;
+}
+
+#prev::before {
+  content: '\f053';
+  font-family: FontAwesome;
+  float: left;
+  opacity: 0.5;
+  text-indent: 0;
+}
+#next::before {
+  content: '\f054';
+  font-family: FontAwesome;
+  float: right;
+  opacity: 0.5;
+  text-indent: 0;
+}
+
+#prev { left: 6.2%; }
+#next { right: 6.2%; }
+.btn:hover { 
+  background-color: rgba(0,0,0,0.5);
+  opacity: 1;
+}
 
  /*=================================
   Banner styling ends here
 =================================*/ 
 
 /*=================================
-  footer styling starts here
+  Welcome styling starts here
 =================================*/ 
 
+.welcome { text-align: center; }
 
+.welcome h2 {
+  padding-top: 40px;
+  margin-bottom: 37px;
+  color: #444;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
 
-
-
-
+.welcome p {
+  color: #444;
+  font-size: 12px;
+  line-height: 1.7;
+}
 
  /*=================================
-  footer styling ends here
+  Welcome styling ends here
 =================================*/ 
 
 
