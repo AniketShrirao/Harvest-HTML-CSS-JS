@@ -298,7 +298,10 @@ h1 img { width: 40%; }
   Welcome styling starts here
 =================================*/ 
 
-.welcome { text-align: center; }
+.welcome { 
+  text-align: center;
+  padding-bottom: 58px;
+}
 
 .welcome h2 {
   padding-top: 40px;
@@ -320,7 +323,28 @@ h1 img { width: 40%; }
   Welcome styling ends here
 =================================*/ 
 
+/*=================================
+  our-services styling starts here
+=================================*/ 
 
+.our-services {
+  text-align: center;
+}
+
+.our-services h2 {
+  padding-top: 46px;
+  margin-bottom: 37px;
+  color: #444;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+
+
+ /*=================================
+  our-services styling ends here
+=================================*/ 
 
 
 
