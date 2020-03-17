@@ -185,6 +185,35 @@ h1 img { width: 40%; }
   main styling starts here
 =================================*/
 
+/*=================================
+  Banner styling starts here
+=================================*/ 
+
+.banner .wrapper { width: 100%; }
+.slide img { max-height: 375px; }
+.slider-content {width: 40%; }
+
+
+
+
+
+ /*=================================
+  Banner styling ends here
+=================================*/ 
+
+/*=================================
+  footer styling starts here
+=================================*/ 
+
+
+
+
+
+
+
+ /*=================================
+  footer styling ends here
+=================================*/ 
 
 
 
