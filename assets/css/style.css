@@ -150,9 +150,9 @@ h1 img { width: 40%; }
 .twitter,
 .instagram,
 .linkedin {
-  text-indent: -9999px;
-  display: inline-block;
   color: var(--primary-color);
+  display: inline-block;
+  text-indent: -9999px;
 }
 
 .facebook::before,
@@ -189,13 +189,101 @@ h1 img { width: 40%; }
   Banner styling starts here
 =================================*/ 
 
-.banner .wrapper { width: 100%; }
+.banner .wrapper {
+  width: 99%;
+  position: relative;
+}
 .slide img { max-height: 375px; }
-.slider-content {width: 40%; }
+.slide { position: relative;}
+.banner-slider { overflow: hidden; }
 
+.slider {
+  display: flex;
+  transition: all .3s ease;
+  transform: translateX(-100%);
+}
 
+.slide {
+  width: 100%;
+  min-width: 100%;
+}
 
+.slider-content {
+  width: 48%;
+  padding: 14px 1% 13px;
+  background-color: var(--primary-color);
+  color: #fff;
+  letter-spacing: 1px;
+  position: absolute;
+  right: 0%;
+  top: 63%;
+  word-spacing: -2px;
+}
 
+.slider-content span {
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.slider-content p { font-size: 14px; }
+
+.angle-right {
+  margin: 10px 2.5%;
+  padding: 10px 13px;
+  background: #fff;
+  color: var(--primary-color);
+  font-size: 9.8px;
+  font-weight: 700;
+  display: flex;
+  line-height: 1;
+  position: absolute;
+  right: 40%;
+  top: 80%;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.angle-right::after {
+  content: '\f105';
+  margin:0 5px;
+  font-family: "Font Awesome 5 Free";
+  font-size: 12px;
+}
+
+.angle-right:hover {
+  background: var(--primary-color);
+  color: #fff;
+  transition: all .3s ease;
+}
+
+.btn {
+  width: auto;
+  padding: 5px 10px;
+  cursor: pointer;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 37%;
+  transition: 0.6s ease;
+  text-indent: -9999px;
+}
+
+#prev::before {
+  content: '\f015';
+  font-family: "Font Awesome 5 Free";
+  float: left;
+  text-indent: 0;
+}
+#next::before {
+  content: '\f014';
+  font-family: "Font Awesome 5 Free";
+  float: right;
+  text-indent: 0;
+}
+
+#prev { left: 6.2%; }
+#next { right: 6.2%; }
+.btn:hover { background-color: rgba(0,0,0,0.5); }
 
  /*=================================
   Banner styling ends here
