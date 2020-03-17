@@ -104,15 +104,77 @@ li {
   margin: 0 auto;
 }
 
+:root{
+  --primary-color : #F17140;
+  --secondary-color :#3C3B3B;
+}
+
 /*=================================
   Header styling starts here
 =================================*/
 
 header .wrapper { 
   width: 96%; 
-  padding: 23px 0;
+  padding: 23px 0 12px;
   display: flex;
   justify-content: space-between;
+}
+
+.hamburger { display: none; }
+h1 img { width: 40%; }
+
+  nav { 
+  width:69%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navigation {
+  width: 55%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navigation a {
+  padding: 4px;
+  color: var(--secondary-color);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.navigation .active { color: var(--primary-color); }
+
+.facebook ,
+.twitter,
+.instagram,
+.linkedin {
+  text-indent: -9999px;
+  display: inline-block;
+  color: var(--primary-color);
+}
+
+.facebook::before,
+.twitter::before,
+.instagram::before,
+.linkedin::before {
+  float: right;
+  font: 500 10px "Font Awesome 5 Brands";
+  text-indent: 0;
+}
+
+.facebook::before{ content: "\f082"; }
+.twitter::before{ content: "\f099"; }
+.instagram::before{ content: "\f16d"; }
+.linkedin::before { content: "\f0e1";}
+
+.header-social-icons {
+  margin: 0;
+  padding: 0px;
+  display: flex;
+  justify-content: space-between;
+  width: 7%;
 }
 
 /*=================================
