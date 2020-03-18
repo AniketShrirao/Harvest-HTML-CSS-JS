@@ -627,6 +627,30 @@ h1 img { width: 40%; }
 =================================*/ 
 
 /*=================================
+  get-in-touch styling starts here
+=================================*/ 
+
+.get-in-touch {
+  padding-bottom: 60px;
+  background: #003e59;
+  color: #fff;
+  text-align: center;
+}
+
+.get-in-touch h3 {
+  padding-top: 65px;
+  margin-bottom: 15px;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+
+ /*=================================
+  get-in-touch styling ends here
+=================================*/ 
+
+/*=================================
   main styling ends here
 =================================*/
 
