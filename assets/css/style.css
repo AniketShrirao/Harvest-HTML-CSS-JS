@@ -566,17 +566,30 @@ h1 img { width: 40%; }
 =================================*/
 
 /*=================================
-  footer styling starts here
+  our-clients styling starts here
 =================================*/ 
 
+.our-clients {
+  text-align: center;
+  background: var(--primary-color);
+}
 
+.our-clients h3 {
+  padding-top: 64px;
+  margin-bottom: 15px;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
 
 
 
 
 
  /*=================================
-  footer styling ends here
+  our-clients styling ends here
 =================================*/ 
 
 
