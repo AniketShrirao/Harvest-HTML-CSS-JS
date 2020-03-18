@@ -146,28 +146,28 @@ h1 img { width: 40%; }
 
 .navigation .active { color: var(--primary-color); }
 
-.facebook ,
-.twitter,
-.instagram,
-.linkedin {
+.header-social-icons .facebook ,
+.header-social-icons .twitter,
+.header-social-icons .instagram,
+.header-social-icons .linkedin {
   color: var(--primary-color);
   display: inline-block;
   text-indent: -9999px;
 }
 
-.facebook::before,
-.twitter::before,
-.instagram::before,
-.linkedin::before {
+.header-social-icons .facebook::before,
+.header-social-icons .twitter::before,
+.header-social-icons .instagram::before,
+.header-social-icons .linkedin::before {
   float: right;
   font: 500 10px "Font Awesome 5 Brands";
   text-indent: 0;
 }
 
-.facebook::before{ content: "\f082"; }
-.twitter::before{ content: "\f099"; }
-.instagram::before{ content: "\f16d"; }
-.linkedin::before { content: "\f0e1";}
+.header-social-icons .facebook::before{ content: "\f082"; }
+.header-social-icons .twitter::before{ content: "\f099"; }
+.header-social-icons .instagram::before{ content: "\f16d"; }
+.header-social-icons .linkedin::before { content: "\f0e1";}
 
 .header-social-icons {
   margin: 0;
@@ -638,13 +638,153 @@ h1 img { width: 40%; }
 }
 
 .get-in-touch h3 {
-  padding-top: 65px;
-  margin-bottom: 15px;
+  padding-top: 52px;
+  margin-bottom: 37px;
   font-size: 22px;
   font-weight: 600;
   letter-spacing: 0.3px;
 }
 
+form { display: flex; }
+
+.form-groups,
+.form-controls { 
+  width: 100%;
+  margin-left: 5px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.form-group label,
+.form-control label {
+  margin-bottom: 5px;
+  font-size: 13px;
+  text-align: left;
+}
+
+.form-group .error,
+.form-control .error {
+  width: 50%;
+  bottom: 50%;
+  font-size: 14px;
+  font-weight: 600;
+  left: -78%;
+  letter-spacing: 1px;
+  position: absolute;
+  transform: translateX(50%);
+  visibility: hidden;
+}
+
+.form-control .error  {
+  right: -78%;
+  transform: translateX(355%);
+  transition: all .3s ease;
+}
+
+.form-group .error::after,
+.form-control .error::before {
+  content: "\f06a";
+  color: #cd5c5c;
+  float: right;
+  font-size: 20px;
+  font-family: "fontAwesome";
+  text-indent: 0;
+}
+
+.form-control .error::before  {
+  float: left;
+  margin-right: 25%;
+}
+
+.success {
+  text-indent: -9999px;
+  position: absolute;
+  bottom: 40%;
+  left: -7%;
+  transform: translateX(50%);
+  visibility: hidden;
+}
+
+.success::after {
+  content: "\f058";
+  font-family: "fontAwesome";
+  text-indent: 0;
+  float: right;
+  font-size: 20px;
+  color: #32cd32;
+}
+
+.form-group input,
+#enquiries {
+  box-sizing: border-box;
+  width: 96%;
+  padding: 9.5px 2%;
+  margin-bottom: 15px;
+  border: 1px solid rgba(67,159,227,0.3);
+  border-right: none;
+  background: #fff;
+}
+
+#enquiries { 
+  color: #777;
+  font-size: 12px;
+}
+
+option { font-size: 14px; }
+
+.form-control {
+  display: block;
+  text-align: left;
+  position: relative;
+}
+
+#TermsandCondition {
+  margin-top: 5px;
+  transform: scale(0.7);
+}
+
+.form-control textarea {
+  box-sizing: border-box;
+  padding: 5px 0.9%;
+  margin-top: 5px;
+}
+
+#TermsandCondition + label a { 
+  color: var(--primary-color);
+  transition: all .3s ease;
+ }
+
+.form-controls p {
+  margin-top: 4px;
+  padding: 10px;
+  font-size: 12px;
+  text-align: left;
+}
+
+#submit {
+  margin-top: 10px;
+  padding: 9.5px 4.9%;
+  border: 1px solid transparent;
+  background: var(--primary-color);
+  color: #fff;
+  font-size: 11px;
+  position: absolute;
+  right: 7%;
+  transition: all .3s ease;
+}
+
+#submit:hover {
+  background: #fff;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+#TermsandCondition + label a:hover { color: #777; }
+.visible { visibility: visible;}
 
  /*=================================
   get-in-touch styling ends here
