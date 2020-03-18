@@ -925,6 +925,16 @@ footer a:hover,
   our-works main styling starts here
 =================================*/
 
+.our-works-banner {
+  padding: 157px;
+  background: url('../images/OurWorkHeader.jpg') no-repeat;
+  background-size: cover;
+  background-position: 0 -85px;
+  text-indent: -9999px;
+}
+
+
+
 /*=================================
   our-works main styling ends here
 =================================*/
