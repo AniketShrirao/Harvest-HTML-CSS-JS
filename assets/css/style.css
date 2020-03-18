@@ -572,11 +572,12 @@ h1 img { width: 40%; }
 .our-clients {
   text-align: center;
   background: var(--primary-color);
+  padding-bottom: 67px;
 }
 
 .our-clients h3 {
   padding-top: 64px;
-  margin-bottom: 15px;
+  margin-bottom: 36px;
   color: #fff;
   font-size: 17px;
   font-weight: 600;
@@ -584,9 +585,14 @@ h1 img { width: 40%; }
   text-transform: uppercase;
 }
 
+.clients {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
 
-
-
+.client { width: 18%; }
 
  /*=================================
   our-clients styling ends here
