@@ -100,7 +100,7 @@ li {
 /*for wrapper*/
 .wrapper {
   max-width: 1360px;
-  width: 60%; 
+  width: 58%; 
   margin: 0 auto;
 }
 
@@ -142,15 +142,16 @@ h1 img { width: 40%; }
   font-weight: 600;
   letter-spacing: 1px;
   text-transform: uppercase;
+  transition: all .4s ease;
 }
 
-.navigation .active { color: var(--primary-color); }
+.navigation .active ,
+.navigation a:hover { color: var(--primary-color); }
 
-.header-social-icons .facebook ,
-.header-social-icons .twitter,
-.header-social-icons .instagram,
-.header-social-icons .linkedin {
-  color: var(--primary-color);
+.facebook ,
+.twitter,
+.instagram,
+.linkedin {
   display: inline-block;
   text-indent: -9999px;
 }
@@ -159,22 +160,29 @@ h1 img { width: 40%; }
 .header-social-icons .twitter::before,
 .header-social-icons .instagram::before,
 .header-social-icons .linkedin::before {
+  color: var(--primary-color);
   float: right;
   font: 500 10px "Font Awesome 5 Brands";
   text-indent: 0;
+  transition: all .4s ease;
 }
 
-.header-social-icons .facebook::before{ content: "\f082"; }
-.header-social-icons .twitter::before{ content: "\f099"; }
-.header-social-icons .instagram::before{ content: "\f16d"; }
-.header-social-icons .linkedin::before { content: "\f0e1";}
+.header-social-icons .facebook:hover::before,
+.header-social-icons .twitter:hover::before,
+.header-social-icons .instagram:hover::before,
+.header-social-icons .linkedin:hover::before { color: #444; }
+
+.facebook::before{ content: "\f082"; }
+.twitter::before{ content: "\f099"; }
+.instagram::before{ content: "\f16d"; }
+.linkedin::before { content: "\f0e1";}
 
 .header-social-icons {
-  margin: 0;
+  width: 7%;
   padding: 0px;
+  margin: 0;
   display: flex;
   justify-content: space-between;
-  width: 7%;
 }
 
 /*=================================
@@ -193,6 +201,7 @@ h1 img { width: 40%; }
   width: 100%;
   position: relative;
 }
+
 .slide img { max-height: 375px; }
 .slide { position: relative;}
 .banner-slider { overflow: hidden; }
@@ -228,7 +237,7 @@ h1 img { width: 40%; }
 .slider-content p { font-size: 14px; }
 
 .angle-right {
-  padding: 8.5px 8.5px;
+  padding: 8.5px 0.7%;
   margin: 10px 2.5%;
   background: #fff;
   color: var(--primary-color);
@@ -445,11 +454,12 @@ h1 img { width: 40%; }
 .portfolio figure {
   overflow: hidden;
   position: relative;
+  max-height: 180px;
 }
 
 .portfolio figure:hover img {
   transform: scale(1.2);
-  transition: all 0.7s ease-in-out;
+  transition: all .5s ease-in-out;
 }
 
 .portfolio figure:hover::before {
@@ -622,6 +632,14 @@ h1 img { width: 40%; }
   margin-bottom: 21px;
 }
 
+.partners figure {
+  transition: all .4s ease;
+}
+
+.partners figure:hover {
+  box-shadow: 14px -14px 15px -4px rgba(25,25,25,0.4), 9px 23px 18px -14px rgba(25,25,25,0.6)
+}
+
  /*=================================
   affiliations styling ends here
 =================================*/ 
@@ -631,15 +649,17 @@ h1 img { width: 40%; }
 =================================*/ 
 
 .get-in-touch {
-  padding-bottom: 60px;
+  padding-bottom: 56px;
   background: #003e59;
   color: #fff;
   text-align: center;
 }
 
+.get-in-touch .wrapper { width: 58%; }
+
 .get-in-touch h3 {
-  padding-top: 52px;
-  margin-bottom: 37px;
+  padding-top: 46px;
+  margin-bottom: 36px;
   font-size: 22px;
   font-weight: 600;
   letter-spacing: 0.3px;
@@ -722,7 +742,7 @@ form { display: flex; }
 #enquiries {
   box-sizing: border-box;
   width: 96%;
-  padding: 9.5px 2%;
+  padding: 8px 2%;
   margin-bottom: 15px;
   border: 1px solid rgba(67,159,227,0.3);
   border-right: none;
@@ -732,6 +752,7 @@ form { display: flex; }
 #enquiries { 
   color: #777;
   font-size: 12px;
+  margin-top: 4px;
 }
 
 option { font-size: 14px; }
@@ -743,7 +764,7 @@ option { font-size: 14px; }
 }
 
 #TermsandCondition {
-  margin-top: 5px;
+  margin-top: 8px;
   transform: scale(0.7);
 }
 
@@ -766,14 +787,14 @@ option { font-size: 14px; }
 }
 
 #submit {
-  margin-top: 10px;
+  margin-top: 14px;
   padding: 9.5px 4.9%;
   border: 1px solid transparent;
   background: var(--primary-color);
   color: #fff;
   font-size: 11px;
   position: absolute;
-  right: 7%;
+  right: 2%;
   transition: all .3s ease;
 }
 
@@ -798,9 +819,30 @@ option { font-size: 14px; }
   footer styling starts here
 =================================*/ 
 
+footer {
+  background: #3c3b3b;
+  color: #fff;
+  text-align: center;
+}
 
+footer .wrapper { width: 58%; }
 
+footer a,
+footer p { 
+  color: #fff;
+  font-size: 12px;
+  transition: all .3s ease;
+}
 
+footer h5 {
+  padding-top: 66px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  text-transform: capitalize;
+  text-align: left;
+}
 
 
 
