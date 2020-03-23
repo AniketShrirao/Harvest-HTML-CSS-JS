@@ -1133,6 +1133,46 @@ footer a:hover,
   join us benefits and perks styling ends here
 ==============================================*/
 
+/*===========================================
+  join us harvest values styling starts here
+============================================*/
+
+.harvest-values { text-align: center; }
+
+.harvest-values h3 {
+  padding-top: 115px;
+  margin-bottom: 43px;
+  box-sizing: border-box;
+  color: #444;
+  font: 600 17px sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.values {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.harvest-value {
+  width: 19%;
+  margin: 2px 2%;
+  padding: 68px 0.5%;
+  border: 1px solid var(--primary-color);
+  background: #e4e6ee;
+  color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: 600 15px sans-serif;
+  text-transform: uppercase;
+}
+
+/*=========================================
+  join us harvest values styling ends here
+==========================================*/
+
 /*media query starts*/
 /*media query for 995px starts here*/
 @media only screen and (max-width: 995px) {
