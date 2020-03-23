@@ -1001,6 +1001,19 @@ footer a:hover,
   join us banner styling starts here
 =================================*/
 
+.join-us-banner {
+  padding: 159px;
+  background: url('../images/Joinuspage/Explore.jpg') no-repeat;
+  background-position: 0 -83px;
+  background-size: cover;
+  text-indent: -9999px;
+}
+
+/*=================================
+  join us banner styling ends here
+=================================*/
+
+
 
 /*media query starts*/
 /*media query for 995px starts here*/
