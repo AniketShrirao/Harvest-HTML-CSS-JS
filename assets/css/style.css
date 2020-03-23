@@ -1084,6 +1084,55 @@ footer a:hover,
   join us harvester styling ends here
 ====================================*/
 
+/*===============================================
+  join us benefits and perks styling starts here
+================================================*/
+
+.benefits-perks {
+  padding-bottom: 46px;
+  background: #efefef;
+  text-align: center;
+}
+
+.benefits-perks h2 {
+  padding-top: 67px;
+  margin-bottom: 35px;
+  box-sizing: border-box;
+  color: #444;
+  font: 600 17px sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.benefits {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.perk {
+  margin-bottom: 24px;
+  display: flex;
+  flex-basis: 33.2%;
+  align-items: center;
+}
+
+.perk figure {
+  width: 17.5%;
+  display: inline-block;
+}
+
+.perk span {
+  margin-left: 3%;
+  color: var(--secondary-color);
+  font-size: 14px;
+  letter-spacing: 1.2px;
+}
+
+/*=============================================
+  join us benefits and perks styling ends here
+==============================================*/
+
 /*media query starts*/
 /*media query for 995px starts here*/
 @media only screen and (max-width: 995px) {
