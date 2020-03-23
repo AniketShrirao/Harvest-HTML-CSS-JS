@@ -925,6 +925,10 @@ footer a:hover,
   our-works main styling starts here
 =================================*/
 
+/*=====================================
+  our-works banner styling starts here
+======================================*/
+
 .our-works-banner {
   padding: 157px;
   background: url('../images/OurWorkHeader.jpg') no-repeat;
@@ -933,6 +937,9 @@ footer a:hover,
   text-indent: -9999px;
 }
 
+/*=================================
+  our-works banner styling ends here
+=================================*/
 
 
 /*=================================
