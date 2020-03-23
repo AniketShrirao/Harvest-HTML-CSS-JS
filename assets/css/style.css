@@ -941,6 +941,53 @@ footer a:hover,
   our-works banner styling ends here
 =================================*/
 
+/*===============================================
+  our-works portfolio -filter styling starts here
+=================================================*/
+
+.portfolio-filter .wrapper { width: 100%; }
+
+.portfolios-links {
+  margin: 0 21% 0 23.9%;
+  margin-bottom: 42px;
+  padding-top: 36px;
+  text-align: center;
+}
+
+.portfoliolink {
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.portfoliolink a {
+  color: var(--secondary-color);
+  font: 600 9.5px sans-serif;
+}
+
+.portfoliolink::after {
+  content: '/';
+  padding: 0 5px;
+  color: #efefef;
+  font-size: 12px;
+}
+
+.portfolio-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.portfolio-img { max-width: 25%; }
+
+.portfolio-img figure {
+  max-width: 335px;
+  margin: 2.5px 2.5px 3px;
+}
+
+/*==============================================
+  our-works portfolio-filter styling starts here
+================================================*/
 
 /*=================================
   our-works main styling ends here
