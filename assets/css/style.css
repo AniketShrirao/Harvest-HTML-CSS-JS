@@ -1046,6 +1046,44 @@ footer a:hover,
   join us harvest history styling ends here
 ==========================================*/
 
+/*=====================================
+  join us harvester styling starts here
+======================================*/
+
+.harvester { text-align: center; }
+
+.harvester h2 {
+  padding-top: 85px;
+  margin-bottom: 50px;
+  box-sizing: border-box;
+  color: #444;
+  font: 600 17px sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.harvester-content {
+  margin-bottom: 53px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.harvester-content p {
+  width: 50%;
+  padding: 0 1.8%;
+  box-sizing: border-box;
+  color: #a68a93;
+  font: 14px/1.5 sans-serif;
+  letter-spacing: 0.5px;
+  text-align: left;
+}
+
+.harvester-content figure { width: 48%; }
+
+/*===================================
+  join us harvester styling ends here
+====================================*/
+
 /*media query starts*/
 /*media query for 995px starts here*/
 @media only screen and (max-width: 995px) {
