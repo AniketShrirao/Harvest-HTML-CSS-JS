@@ -130,23 +130,23 @@ h1 img { width: 40%; }
 }
 
 .navigation {
-  width: 55%;
+  width: 85%;
   display: flex;
-  justify-content: space-between;
 }
+
+.navigation li:nth-of-type(even) { margin-right: 2%; }
+.navigation li:nth-of-type(odd) { margin-right: 2.1%; }
 
 .navigation a {
   padding: 4px;
   color: var(--secondary-color);
-  font-size: 9px;
-  font-weight: 600;
+  font: 600 9px sans-serif;
   letter-spacing: 1px;
   text-transform: uppercase;
   transition: all .4s ease;
 }
 
-.navigation .active ,
-.navigation a:hover { color: var(--primary-color); }
+.navigation .active { color: var(--primary-color); }
 
 .facebook ,
 .twitter,
@@ -167,11 +167,6 @@ h1 img { width: 40%; }
   transition: all .4s ease;
 }
 
-.header-social-icons .facebook:hover::before,
-.header-social-icons .twitter:hover::before,
-.header-social-icons .instagram:hover::before,
-.header-social-icons .linkedin:hover::before { color: #444; }
-
 .facebook::before{ content: "\f082"; }
 .twitter::before{ content: "\f099"; }
 .instagram::before{ content: "\f16d"; }
@@ -179,7 +174,7 @@ h1 img { width: 40%; }
 
 .header-social-icons {
   width: 7%;
-  padding: 0px;
+  padding: 0;
   margin: 0;
   display: flex;
   justify-content: space-between;
@@ -237,12 +232,11 @@ h1 img { width: 40%; }
 .slider-content p { font-size: 14px; }
 
 .angle-right {
-  padding: 8.5px 0.7%;
+  padding: 8.5px;
   margin: 10px 2.5%;
   background: #fff;
   color: var(--primary-color);
-  font-size: 9.8px;
-  font-weight: 700;
+  font: 700 9.8px sans-serif;
   display: flex;
   line-height: 1;
   position: absolute;
@@ -257,12 +251,6 @@ h1 img { width: 40%; }
   margin:0 5px;
   font-family: FontAwesome;
   font-size: 12px;
-}
-
-.angle-right:hover {
-  background: var(--primary-color);
-  color: #fff;
-  transition: all .3s ease;
 }
 
 .btn {
@@ -295,11 +283,6 @@ h1 img { width: 40%; }
 #prev { left: 6.2%; }
 #next { right: 6.2%; }
 
-.btn:hover { 
-  background-color: rgba(0,0,0,0.5);
-  opacity: 1;
-}
-
  /*=================================
   Banner styling ends here
 =================================*/ 
@@ -314,11 +297,10 @@ h1 img { width: 40%; }
 }
 
 .welcome h2 {
-  padding-top: 52px;
+  padding-top: 41px;
   margin-bottom: 35px;
   color: #444;
-  font-size: 18px;
-  font-weight: 600;
+  font: 600 18px sans-serif;
   letter-spacing: 0.3px;
   text-transform: uppercase;
 }
@@ -343,8 +325,7 @@ h1 img { width: 40%; }
   padding-top: 46px;
   margin-bottom: 48px;
   color: #444;
-  font-size: 17px;
-  font-weight: 600;
+  font: 600 17px sans-serif;
   letter-spacing: 0.3px;
   text-transform: uppercase;
 }
@@ -352,6 +333,7 @@ h1 img { width: 40%; }
 .serivces {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 24px;
 }
 
 .serivces li {
@@ -368,8 +350,7 @@ h1 img { width: 40%; }
   margin-bottom: 21px;
   color: #777;
   display: block;
-  font-size: 12px;
-  font-weight: 600;
+  font: 600 12px sans-serif;
   letter-spacing: 0.5px;
   text-transform: uppercase;
 }
@@ -401,18 +382,10 @@ h1 img { width: 40%; }
   margin-top: 36px;
   color: #777;
   display: block;
-  font-size: 12px;
-  font-weight: 600;
+  font: 600 12px sans-serif;
   letter-spacing: 0.5px;
   text-transform: uppercase;
 }
-
-.serivces li:hover {
-  transform: scale(1.1);
-  transition: all ease-in-out;
-}
-
-.serivces li:hover span { color: var(--primary-color); }
 
  /*=================================
   our-services styling ends here
@@ -433,8 +406,7 @@ h1 img { width: 40%; }
   padding-top: 64px;
   margin-bottom: 15px;
   color: #444;
-  font-size: 17px;
-  font-weight: 600;
+  font: 600 17px sans-serif;
   letter-spacing: 0.3px;
   text-transform: uppercase;
 }
@@ -442,8 +414,7 @@ h1 img { width: 40%; }
 .our-latest-work a {
   margin-bottom: 44px;
   color: #444;
-  font-size: 10px;
-  font-weight: 700;
+  font: 700 10px sans-serif;
   letter-spacing: 0.3px;
   line-height: 1.3;
   text-transform: uppercase;
@@ -455,23 +426,6 @@ h1 img { width: 40%; }
   overflow: hidden;
   position: relative;
   max-height: 180px;
-}
-
-.portfolio figure:hover img {
-  transform: scale(1.2);
-  transition: all .5s ease-in-out;
-}
-
-.portfolio figure:hover::before {
-  content: "";
-  width: 100%;
-  background-color: rgba(0,0,0,0.5);
-  bottom: 0;
-  cursor: pointer;
-  position: absolute;
-  top: 0;
-  transition: all .4s ease-in-out;
-  z-index: 1;
 }
 
 .portfolio figure::after {
@@ -486,11 +440,6 @@ h1 img { width: 40%; }
   top: 50%;
   transition: all .7s ease-in-out;
   z-index: 2;
-}
-
-.portfolio figure:hover::after {
-  opacity: 1;
-  transform: translate(-50%, -50%);
 }
 
 .portfolio:nth-child(3) { min-width: 25%; }
@@ -555,10 +504,8 @@ h1 img { width: 40%; }
   transition: all 0.3s ease;
 }
 
-
 .show { display: flex; }
 .no-scroll { overflow: hidden; }
-.close:hover { opacity: 1;}
 .close:before { transform: rotate(45deg); }
 .close:after { transform: rotate(-45deg); }
 
@@ -580,8 +527,7 @@ h1 img { width: 40%; }
   padding-top: 64px;
   margin-bottom: 36px;
   color: #fff;
-  font-size: 17px;
-  font-weight: 600;
+  font: 600 17px sans-serif;
   letter-spacing: 0.3px;
   text-transform: uppercase;
 }
@@ -613,8 +559,7 @@ h1 img { width: 40%; }
   padding-top: 65px;
   margin-bottom: 15px;
   color: #444;
-  font-size: 17px;
-  font-weight: 600;
+  font: 600 17px sans-serif;
   letter-spacing: 0.3px;
   text-transform: uppercase;
 }
@@ -632,13 +577,7 @@ h1 img { width: 40%; }
   margin-bottom: 21px;
 }
 
-.partners figure {
-  transition: all .4s ease;
-}
-
-.partners figure:hover {
-  box-shadow: 14px -14px 15px -4px rgba(25,25,25,0.4), 9px 23px 18px -14px rgba(25,25,25,0.6)
-}
+.partners figure { transition: all .4s ease; }
 
  /*=================================
   affiliations styling ends here
@@ -660,8 +599,7 @@ h1 img { width: 40%; }
 .get-in-touch h3 {
   padding-top: 46px;
   margin-bottom: 36px;
-  font-size: 22px;
-  font-weight: 600;
+  font: 600 22px sans-serif;
   letter-spacing: 0.3px;
 }
 
@@ -669,9 +607,10 @@ form { display: flex; }
 
 .form-groups,
 .form-controls { 
-  width: 100%;
-  margin-left: 5px;
+  width: 50%;
 }
+
+.form-controls { margin-left: 2.56%;}
 
 .form-group {
   display: flex;
@@ -690,8 +629,7 @@ form { display: flex; }
 .form-control .error {
   width: 50%;
   bottom: 50%;
-  font-size: 14px;
-  font-weight: 600;
+  font: 600 14px sans-serif;
   left: -78%;
   letter-spacing: 1px;
   position: absolute;
@@ -741,8 +679,8 @@ form { display: flex; }
 .form-group input,
 #enquiries {
   box-sizing: border-box;
-  width: 96%;
-  padding: 8px 2%;
+  width: 100%;
+  padding: 8px;
   margin-bottom: 15px;
   border: 1px solid rgba(67,159,227,0.3);
   border-right: none;
@@ -769,9 +707,12 @@ option { font-size: 14px; }
 }
 
 .form-control textarea {
+  width: 100%;
+  min-height: 87px;
+  padding: 5px;
+  margin: 5px 0;
   box-sizing: border-box;
-  padding: 5px 0.9%;
-  margin-top: 5px;
+  display: block;
 }
 
 #TermsandCondition + label a { 
@@ -779,32 +720,32 @@ option { font-size: 14px; }
   transition: all .3s ease;
  }
 
+ #TermsandCondition + label a:last-of-type { margin-left: 6%; }
+
 .form-controls p {
-  margin-top: 4px;
-  padding: 10px;
+  margin: 10px 1%;
   font-size: 12px;
+  line-height: 1.4;
   text-align: left;
 }
 
+.form-control:last-of-type {
+  width: 100%;
+  display: inline-block;
+ }
+
 #submit {
-  margin-top: 14px;
-  padding: 9.5px 4.9%;
+  margin: 10px 2% 0 0;
+  padding: 11px 5.2%;
   border: 1px solid transparent;
   background: var(--primary-color);
   color: #fff;
-  font-size: 11px;
-  position: absolute;
+  font: 600 11px sans-serif;
   right: 2%;
   transition: all .3s ease;
+  float: right;
 }
 
-#submit:hover {
-  background: #fff;
-  color: var(--primary-color);
-  font-weight: 600;
-}
-
-#TermsandCondition + label a:hover { color: #777; }
 .visible { visibility: visible;}
 
  /*=================================
@@ -814,112 +755,6 @@ option { font-size: 14px; }
 /*=================================
   index main styling ends here
 =================================*/
-
-/*=================================
-  footer styling starts here
-=================================*/ 
-
-footer {
-  background: #3c3b3b;
-  color: #fff;
-  text-align: center;
-}
-
-footer .wrapper { width: 58%; }
-
-footer a,
-footer p { 
-  color: #fff;
-  font-size: 12px;
-  transition: all .3s ease;
-}
-
-footer h5 {
-  padding-top: 66px;
-  margin-bottom: 20px;
-  font-size: 18px;
-  font-weight: 600;
-  letter-spacing: 0.3px;
-  text-transform: capitalize;
-  text-align: left;
-}
-
-.company-info { display: flex; }
-
-.getintouch {
-  display: flex;
-  flex-direction: column;
-}
-
-.information {
-  width: 25%;
-  margin-left: 6.5%;
-  display: flex;
-  flex-direction: column;
-}
-
-.getintouch ul {
-  width: 73%;
-  margin-left: 10%;
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-}
-
-.getintouch li,
-.information li { padding: 0 0 6px; }
-
-.getintouch a,
-.getintouch address {
-  font-size: 11px;
-  line-height: 1.5;
-  position: relative;
-  text-transform: uppercase;
-}
-
-.getintouch a::before,
-.getintouch address::before {
-  position: absolute;
-  float: left;
-  font-family: "fontAwesome";
-  left: -15px;
-  text-indent: 0;
-}
-
-.information ul {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-}
-
-.telephone::before { content: '\f095'; }
-.infoMail::before { content: '\f0e0'; }
-.Co-Address::before { content: '\f041'; }
-footer p { margin: 30px 0 40px; }
-.footer-social-icons { padding-bottom: 25px; }
-.footer-social-icons a { padding: 3px; }
-
-.footer-social-icons .facebook::before,
-.footer-social-icons .twitter::before,
-.footer-social-icons .instagram::before,
-.footer-social-icons .linkedin::before {
-  color: #fff;
-  float: right;
-  font: 500 23px "Font Awesome 5 Brands";
-  text-indent: 0;
-  transition: all .3s ease;
-}
-
-footer a:hover,
-.footer-social-icons .facebook:hover::before,
-.footer-social-icons .twitter:hover::before,
-.footer-social-icons .instagram:hover::before,
-.footer-social-icons .linkedin:hover::before { color: var(--primary-color); } 
-
- /*=================================
-  footer styling ends here
-=================================*/ 
 
 /*=================================
   our-works main styling starts here
@@ -1172,6 +1007,206 @@ footer a:hover,
 /*=========================================
   join us harvest values styling ends here
 ==========================================*/
+
+/*========================================
+  join us oppotunities styling starts here
+=========================================*/
+
+.opportunities { padding-bottom: 16px; }
+.opportunities .wrapper { width: 60%; }
+
+.opportunities h4 {
+  padding-top: 98px;
+  margin-bottom: 50px;
+  box-sizing: border-box;
+  color: #444;
+  font: 600 17px sans-serif;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+#job-categories {
+  width: 14%;
+  padding: 10px 0.3% 9px 0.5%;
+  margin: 25px 10%;
+  border: 1px solid #ebebeb;
+  border-radius: 4px;
+  box-shadow: 3px 3px 5px 0 rgba(0,0,0,.04);
+  background: #fff;
+  color: #444;
+  display: block;
+  font-size: 9px;
+  outline: none;
+  overflow: hidden;
+  position: relative;
+  text-align: left;
+}
+
+#job-categories option { font-size: 12px; }
+
+.jobs {
+  margin: 20px 10%;
+  box-shadow: 0 5px 15px 0 rgba(0,0,0,.13);
+  display: flex;
+  flex-direction: column;
+}
+
+.job {
+  padding: 16px;
+  border: 1px solid #ebebeb;
+  border-radius: 4px;
+  box-shadow: 3px 3px 5px 0 rgba(0,0,0,.04);
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  letter-spacing: 1px;
+  outline: none;
+  overflow: hidden;
+  position: relative;
+}
+
+.job-details {
+  display: flex;
+  justify-content: flex-end;
+  flex-basis: 50%;
+}
+
+.more-details ,
+.job > span {
+  color: var(--primary-color);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.timing { padding: 0 3%; }
+
+.job-cat::before ,
+.more-details::after ,
+.timing::before {
+  margin-right: 3px;
+  font-family: fontAwesome;
+  float: left;
+}
+
+.job-cat::before  { content: "\f1ad"; }
+.timing::before { content: "\f042"; }
+.more-details,
+.timing,
+.job-cat { font-size: 8.8px; }
+
+.more-details::after { 
+  content: "\002192";
+  float: right;
+ }
+
+ /*=====================================
+  join us oppotunities styling ends here
+======================================*/
+
+/*=================================
+  join-us main styling ends here
+=================================*/
+
+/*=================================
+  footer styling starts here
+=================================*/ 
+
+footer {
+  background: #3c3b3b;
+  color: #ededed;
+  text-align: center;
+}
+
+footer .wrapper { width: 58%; }
+
+footer a,
+footer p { 
+  color: #ededed;
+  font-size: 12px;
+  transition: all .3s ease;
+}
+
+footer h5 {
+  padding-top: 64px;
+  margin-bottom: 20px;
+  font: 600 18px sans-serif;
+  letter-spacing: 0.3px;
+  text-transform: capitalize;
+  text-align: left;
+}
+
+.company-info { display: flex; }
+
+.getintouch {
+  display: flex;
+  flex-direction: column;
+}
+
+.information {
+  width: 25%;
+  margin-left: 6.5%;
+  display: flex;
+  flex-direction: column;
+}
+
+.getintouch ul {
+  width: 73%;
+  margin-left: 10%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.getintouch li,
+.information li { padding: 0 0 6px; }
+
+.getintouch a,
+.getintouch address {
+  font-size: 11px;
+  line-height: 1.5;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.getintouch a::before,
+.getintouch address::before {
+  position: absolute;
+  float: left;
+  font-family: "fontAwesome";
+  left: -15px;
+  text-indent: 0;
+}
+
+.information ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.telephone::before { content: '\f095'; }
+.infoMail::before { content: '\f0e0'; }
+.Co-Address::before { content: '\f041'; }
+footer p { margin: 30px 0 40px; }
+.footer-social-icons { padding-bottom: 20px; }
+.footer-social-icons a { padding: 3px; }
+
+.footer-social-icons .facebook::before,
+.footer-social-icons .twitter::before,
+.footer-social-icons .instagram::before,
+.footer-social-icons .linkedin::before {
+  color: #ededed;
+  float: right;
+  font: 500 23px "Font Awesome 5 Brands";
+  text-indent: 0;
+  transition: all .3s ease;
+}
+
+ /*=================================
+  footer styling ends here
+=================================*/ 
+
 
 /*media query starts*/
 /*media query for 995px starts here*/
