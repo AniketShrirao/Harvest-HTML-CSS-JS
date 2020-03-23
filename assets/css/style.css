@@ -1013,7 +1013,38 @@ footer a:hover,
   join us banner styling ends here
 =================================*/
 
+/*============================================
+  join us harvest history styling starts here
+============================================*/
 
+.harvest-history { text-align: center; }
+
+.harvest-history h2 {
+  margin: 30px 0;
+  color: var(--primary-color);
+  font: 600 32px sans-serif;
+}
+
+.harvest-history p {
+  padding: 0 11px;
+  margin-bottom: 30px;
+  color: #a68a93;
+  font: 14px/1.5 sans-serif;
+  letter-spacing: 0.2px;
+}
+
+.harvest-history a {
+  padding: 11px 2.67%;
+  font-size: 11px;
+  letter-spacing: 1px;
+  background: #ebebeb;
+  color: var(--secondary-color);
+  transition: all .3s ease;
+}
+
+/*=========================================
+  join us harvest history styling ends here
+==========================================*/
 
 /*media query starts*/
 /*media query for 995px starts here*/
