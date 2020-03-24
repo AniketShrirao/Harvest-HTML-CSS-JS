@@ -104,11 +104,6 @@ li {
   margin: 0 auto;
 }
 
-:root{
-  --primary-color : #F17140;
-  --secondary-color :#3C3B3B;
-}
-
 /*=================================
   Header styling starts here
 =================================*/
@@ -186,7 +181,7 @@ h1 img { width: 40%; }
 
 .navigation a {
   padding: 4px;
-  color: var(--secondary-color);
+  color: #3C3B3B;
   cursor: pointer;
   font: 600 9px sans-serif;
   letter-spacing: 1px;
@@ -195,7 +190,7 @@ h1 img { width: 40%; }
   transition: all .4s ease;
 }
 
-.navigation .active { color: var(--primary-color); }
+.navigation .active { color: #F17140; }
 
 .facebook ,
 .twitter,
@@ -209,7 +204,7 @@ h1 img { width: 40%; }
 .header-social-icons .twitter::before,
 .header-social-icons .instagram::before,
 .header-social-icons .linkedin::before {
-  color: var(--primary-color);
+  color: #F17140;
   float: right;
   font: 500 10px "Font Awesome 5 Brands";
   text-indent: 0;
@@ -257,7 +252,7 @@ h1 img { width: 40%; }
 .slider-content {
   width: 48%;
   padding: 14px 1% 13px;
-  background-color: var(--primary-color);
+  background-color: #F17140;
   color: #fff;
   letter-spacing: 1px;
   position: absolute;
@@ -277,7 +272,7 @@ h1 img { width: 40%; }
   padding: 8.5px;
   margin: 10px 2.5%;
   background: #fff;
-  color: var(--primary-color);
+  color: #F17140;
   font: 700 9.8px sans-serif;
   display: -webkit-box;
   display: flex;
@@ -415,7 +410,7 @@ h1 img { width: 40%; }
 .service-icon a:before {
   content: "\f061";
   margin-right: 33px;
-  color: var(--primary-color);
+  color: #F17140;
   font-family: FontAwesome;
   font-size: 25px;
   float: right;
@@ -621,7 +616,7 @@ h1 img { width: 40%; }
 
 .our-clients {
   padding-bottom: 67px;
-  background: var(--primary-color);
+  background: #F17140;
   text-align: center;
 }
 
@@ -830,7 +825,7 @@ option { font-size: 14px; }
 }
 
 #TermsandCondition + label a { 
-  color: var(--primary-color);
+  color: #F17140;
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
  }
@@ -853,7 +848,7 @@ option { font-size: 14px; }
   margin: 10px 2% 0 0;
   padding: 11px 5.2%;
   border: 1px solid transparent;
-  background: var(--primary-color);
+  background: #F17140;
   color: #fff;
   font: 600 11px sans-serif;
   right: 2%;
@@ -1015,12 +1010,12 @@ option { font-size: 14px; }
 }
 
 .portfoliolink a {
-  color: var(--secondary-color);
+  color: #3C3B3B;
   font: 600 9.5px sans-serif;
   cursor: pointer;
 }
 
-.portfoliolink a.active { color: var(--primary-color); }
+.portfoliolink a.active { color: #F17140; }
 
 .portfoliolink::after {
   content: '/';
@@ -1085,7 +1080,7 @@ option { font-size: 14px; }
 
 .harvest-history h2 {
   margin: 30px 0;
-  color: var(--primary-color);
+  color: #F17140;
   font: 600 32px sans-serif;
 }
 
@@ -1102,7 +1097,7 @@ option { font-size: 14px; }
   font-size: 11px;
   letter-spacing: 1px;
   background: #ebebeb;
-  color: var(--secondary-color);
+  color: #3C3B3B;
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
 }
@@ -1195,7 +1190,7 @@ option { font-size: 14px; }
 
 .perk span {
   margin-left: 3%;
-  color: var(--secondary-color);
+  color: #3C3B3B;
   font-size: 14px;
   letter-spacing: 1.2px;
 }
@@ -1233,9 +1228,9 @@ option { font-size: 14px; }
   width: 19%;
   margin: 2px 2%;
   padding: 68px 0.5%;
-  border: 1px solid var(--primary-color);
+  border: 1px solid #F17140;
   background: #e4e6ee;
-  color: var(--primary-color);
+  color: #F17140;
   display: -webkit-box;
   display: flex;
   -webkit-box-pack: center;
@@ -1323,7 +1318,7 @@ option { font-size: 14px; }
 
 .more-details ,
 .job > span {
-  color: var(--primary-color);
+  color: #F17140;
   cursor: pointer;
   font-weight: 600;
 }
@@ -1480,7 +1475,7 @@ footer p { margin: 30px 0 40px; }
 /*media query for 1024px starts here*/
 @media only screen and (min-width: 1024px) {
   .angle-right:hover {
-    background: var(--primary-color);
+    background: #F17140;
     color: #fff;
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
@@ -1488,7 +1483,7 @@ footer p { margin: 30px 0 40px; }
 
   .slick-prev:hover::before,
   .slick-next:hover::before { 
-    color: var(--primary-color);
+    color: #F17140;
     opacity: 1;
   }
 
@@ -1527,11 +1522,11 @@ footer p { margin: 30px 0 40px; }
 
   #submit:hover {
     background: #fff;
-    color: var(--primary-color);
+    color: #F17140;
   }
 
   .harvest-history a:hover {
-    background: var(--primary-color);
+    background: #F17140;
     color: #fff;
   }
 
@@ -1553,7 +1548,7 @@ footer p { margin: 30px 0 40px; }
   .footer-social-icons .facebook:hover::before,
   .footer-social-icons .twitter:hover::before,
   .footer-social-icons .instagram:hover::before,
-  .footer-social-icons .linkedin:hover::before { color: var(--primary-color); } 
+  .footer-social-icons .linkedin:hover::before { color: #F17140; } 
   .close:hover { opacity: 1; }
   #TermsandCondition + label a:hover { color: #777; }
   .partners figure:hover { box-shadow: 14px -14px 15px -4px rgba(25,25,25,0.4), 9px 23px 18px -14px rgba(25,25,25,0.6) }
@@ -1631,7 +1626,7 @@ footer p { margin: 30px 0 40px; }
   .getintouch ul,
   .information ul { text-align: unset; }
   .getintouch .infoMail::before { left: -25px; }
-  .getintouch .telephone::before::before { left: 25px; }
+  .getintouch .telephone::before { left: 25px; }
   .portfoliolink a { font: 600 12.5px sans-serif; }
   .portfolio-img { width: 82%; }
   .harvester-content { -webkit-box-orient: vertical; -webkit-box-direction: reverse; flex-direction: column-reverse; }
@@ -1744,7 +1739,7 @@ footer p { margin: 30px 0 40px; }
   }
 
   .perk {
-    margin: 24 0;
+    margin: 24px 0;
     border-bottom: 1px solid #ddd;
     -webkit-box-align: center;
             align-items: center;
