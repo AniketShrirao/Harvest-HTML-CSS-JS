@@ -1298,12 +1298,18 @@ option { font-size: 14px; }
   box-shadow: 3px 3px 5px 0 rgba(0,0,0,.04);
   background: #fff;
   -webkit-box-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   font-size: 10px;
   letter-spacing: 1px;
   outline: none;
   overflow: hidden;
   position: relative;
+  animation: scale ;
+  -webkit-animation: scale;
+  -webkit-animation-duration: .4s;
+          animation-duration: .4s;
+  -webkit-animation-timing-function: ease-in-out ;
+          animation-timing-function: ease-in-out ;
 }
 
 .job-details {
