@@ -1,19 +1,17 @@
 <!doctype html>
 <!-- If multi-language site, reconsider usage of html lang declaration here. -->
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <title>Home | Harvest</title>
-  <!-- View-port Basics: http://mzl.la/VYREaP -->
-  <!-- This meta tag is used for mobile device to display the page without any zooming,
-    so how much the device is able to fit on the screen is what's shown initially. 
-    Remove comments from this tag, when you want to apply media queries to the website.-->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <!-- Place favicon.ico in the root directory: mathiasbynens.be/notes/touch-icons -->
   <!--font-awesome link for icons-->
   <link rel="stylesheet" media="screen" href="assets/vendor/font-awesome/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- slick css file -->
+  <link rel="stylesheet" type="text/css" href="assets/vendor/slick/slick.css">
+  <link rel="stylesheet" type="text/css" href="assets/vendor/slick/slick-theme.css">
   <!-- Default style-sheet is for 'media' type screen (color computer display).  -->
   <link rel="stylesheet" media="screen" href="assets/css/style.css">
 </head>
@@ -85,70 +83,41 @@
       <!--banner section start-->
       <div class="banner">
         <div class="wrapper">
-          <div class="banner-slider">
-            <ul class="slider">
-              <li class="slide" id="first">
-                <figure>
-                  <img src="https://via.placeholder.com/1351x673?text=Harvest-three" alt="Vanquis Bank">
-                </figure>
-                <div class="slider-content">
-                  <span>vanquis bank</span>
-                  <p>improved CPC by 2.2 &percnt; and CTR by 28 &percnt;</p>
-                </div>
-                <a href="#FIXME" class="angle-right" title="Read More">read more</a>
-              </li>
+            <ul class="banner-slider">
               <li class="slide">
                 <figure>
-                  <img src="https://via.placeholder.com/1351x673?text=Harvest-one" alt="Sunlife">
+                  <img src="https://via.placeholder.com/1351x673?text=Harvest-one" class="desktop" alt="Sunlife">
+                  <img src="https://via.placeholder.com/768x1024?text=Harvest-one" class="mobile" alt="Sunlife">
                 </figure>
                 <div class="slider-content">
                   <span>sunlife</span>
-                  <p>improved CPC by 2.2 &percnt; and CTR by 28 &percnt;</p>
+                  <p>improved CPC by 2.2&percnt; and CTR by 28&percnt;</p>
                 </div>
                 <a href="#FIXME" class="angle-right" title="Read More">read more</a>
               </li>
               <li class="slide">
                 <figure>
-                  <img src="https://via.placeholder.com/1351x673?text=Harvest-two" alt="FishPool Furniture Store">
+                  <img src="https://via.placeholder.com/1351x673?text=Harvest-two" class="desktop" alt="FishPool Furniture Store">
+                  <img src="https://via.placeholder.com/768x1024?text=Harvest-two" class="mobile" alt="FishPool Furniture Store">
                 </figure>
                 <div class="slider-content">
                   <span>fishpools furniture store</span>
-                  <p>improved CPC by 2.2 &percnt; and CTR by 28 &percnt;</p>
+                  <p>improved CPC by 2.2&percnt; and CTR by 28&percnt;</p>
                 </div>
                 <a href="#FIXME" class="angle-right" title="Read More">read more</a>
               </li>
               <li class="slide">
                 <figure>
-                  <img src="https://via.placeholder.com/1351x673?text=Harvest-three" alt="Vanquis Bank">
+                  <img src="https://via.placeholder.com/1351x673?text=Harvest-three" class="desktop" alt="Vanquis Bank">
+                  <img src="https://via.placeholder.com/768x1024?text=Harvest-three" class="mobile" alt="Vanquis Bank">
                 </figure>
                 <div class="slider-content">
                   <span>vanquis bank</span>
-                  <p>improved CPC by 2.2 &percnt; and CTR by 28 &percnt;</p>
-                </div>
-                <a href="#FIXME" class="angle-right" title="Read More">read more</a>
-              </li>
-              <li class="slide" id="last">
-                <figure>
-                  <img src="https://via.placeholder.com/1351x673?text=Harvest-one" alt="Sunlife">
-                </figure>
-                <div class="slider-content">
-                  <span>sunlife</span>
-                  <p>improved CPC by 2.2 &percnt; and CTR by 28 &percnt;</p>
+                  <p>improved CPC by 2.2&percnt; and CTR by 28&percnt;</p>
                 </div>
                 <a href="#FIXME" class="angle-right" title="Read More">read more</a>
               </li>
             </ul>
-            <div class="slide-controls">
-              <ul class="buttons">
-                <li>
-                  <a href="#FIXME" class="btn" id="prev" title="Previous Slide">prev</a>
-                </li>
-                <li>
-                  <a href="#FIXME" class="btn" id="next" title="Next Slide">next</a>
-                </li>
-              </ul>
-            </div>
-          </div>
         </div>
       </div>
       <!--banner section end-->
@@ -167,63 +136,63 @@
       <section class="our-services">
         <div class="wrapper">
           <h2>our services</h2>
-          <ul class="serivces">
-            <li class="serivce">
+          <ul class="services">
+            <li class="service">
               <figure>
                 <img src="assets/images/Services/Integrated-Start.png" alt="Integrated Start">
               </figure>
               <span>integrated strategy</span>
             </li>
-            <li class="serivce">
+            <li class="service">
               <figure>
                 <img src="assets/images/Services/Paid-social.png" alt="Paid Social">
               </figure>
               <span>paid social</span>
             </li>
-            <li class="serivce">
+            <li class="service">
               <figure>
                 <img src="assets/images/Services/Paid-search.png" alt="Paid Search">
               </figure>
               <span>paid search</span>
             </li>
-            <li class="serivce">
+            <li class="service">
               <figure>
                 <img src="assets/images/Services/Display.png" alt="Display">
               </figure>
               <span>display</span>
             </li>
-            <li class="serivce">
+            <li class="service">
               <figure>
                 <img src="assets/images/Services/Data-Analytics.png" alt="Data Analytics">
               </figure>
               <span>data analytics</span>
             </li>
-            <li class="serivce">
+            <li class="service">
               <figure>
                 <img src="assets/images/Services/SEO.png" alt="SEO">
               </figure>
               <span>seo</span>
             </li>
-            <li class="serivce">
+            <li class="service">
               <figure>
                 <img src="assets/images/Services/Content-marketing.png" alt="Content Marketing">
               </figure>
               <span>content marketing</span>
             </li>
-            <li class="serivce">
+            <li class="service">
               <figure>
                 <img src="assets/images/Services/E-comm.png" alt="E-Commerce">
               </figure>
               <span>e-commerce</span>
             </li>
-            <li class="serivce">
+            <li class="service">
               <figure>
                 <img src="assets/images/Services/UX2.png" alt="UX">
               </figure>
               <span>ux</span>
             </li>
-            <li class="serivce-icon">
-              <a href="#FIXME" title="All Serivces" class="right-arrow">all services</a>
+            <li class="service-icon">
+              <a href="#FIXME" title="All services" class="right-arrow">all services</a>
               <span>all services</span>
             </li>
           </ul>
@@ -420,7 +389,6 @@
                 <label for="TermsandCondition">I have read and agree to the <a href="#FIXME"
                     title="Terms and Condtions"> Terms &amp; Conditions</a> and <a href="#FIXME" title="Privacy">Privacy
                     <a href="#FIXME" title="Policy">Policy</a></label>
-                <span class="error">error</span>
               </div>
               <p>By submitting this contact form you are giving us permission to email you about your questions or
                 requests.</p>
@@ -429,6 +397,10 @@
               </div>
             </div>
           </form>
+          <div class='customAlert'>
+            <p class='message'></p>
+            <input type='button' class='confirm-button' value='Ok'>
+          </div>
         </div>
       </section>
       <!--get-in-touch section end-->
@@ -450,7 +422,9 @@
                   class="infoMail">info@harvestdigital.com</a>
               </li>
               <li>
-                <address class="Co-Address">40 CLIFTON STREET, LONDON, EC2A 4DX</address>
+                <address>
+                  <a href="#FIXME" title="40 CLIFTON STREET, LONDON, EC2A 4DX" class="Co-Address" >40 CLIFTON STREET, LONDON, EC2A 4DX</a>
+              </address>
               </li>
             </ul>
           </div>
@@ -499,6 +473,9 @@
     <!--footer section end-->
   </div>
   <!--container end-->
+  <script src="assets/vendor/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="assets/vendor/slick/slick.min.js"></script>
   <script src="assets/js/script.js"></script>
 </body>
 </html>
