@@ -114,8 +114,8 @@ li {
 =================================*/
 
 header .wrapper { 
-  width: 96%; 
-  padding: 15px 0 12px;
+  width: 97%; 
+  padding: 15px 0 13px;
   display: flex;
   justify-content: space-between;
 }
@@ -134,12 +134,55 @@ h1 img { width: 40%; }
   display: flex;
 }
 
+.hamburger {
+  width: 40px;
+  float : right;
+  display: none;
+  position: relative;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+} 
+
+.hamburger > span {
+  background-color: #000;
+  border-radius: 3px;
+  display: block;
+  height: 4px;
+  margin: 5px 0;
+  text-indent: -9999px;
+  transition: all .5s ease-in-out;
+}
+
+.hamburger-active > span:nth-child(1) {
+  background-color: crimson;
+  margin: 0;
+  transform: translate(-4px,8px) rotate(45deg);
+}
+.hamburger-active > span:nth-child(2) {
+  background-color: blueviolet;
+  margin: 0;
+  transform: scale(0);
+}
+.hamburger-active > span:nth-child(3) {
+  background-color: crimson;
+  margin: 0;
+  transform: translate(-5px,0px) rotate(-45deg);
+}
+
 .navigation li:nth-of-type(even) { margin-right: 2%; }
 .navigation li:nth-of-type(odd) { margin-right: 2.1%; }
 
 .navigation a {
   padding: 4px;
   color: var(--secondary-color);
+  cursor: pointer;
   font: 600 9px sans-serif;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -199,18 +242,8 @@ h1 img { width: 40%; }
 
 .slide img { max-height: 375px; }
 .slide { position: relative;}
-.banner-slider { overflow: hidden; }
-
-.slider {
-  display: flex;
-  transition: all .3s ease;
-  transform: translateX(-100%);
-}
-
-.slide {
-  width: 100%;
-  min-width: 100%;
-}
+.banner-slider .desktop { display: block; }
+.banner-slider .mobile { display: none; }
 
 .slider-content {
   width: 48%;
@@ -253,37 +286,31 @@ h1 img { width: 40%; }
   font-size: 12px;
 }
 
-.btn {
-  width: auto;
-  padding: 5px 10px;
-  cursor: pointer;
-  color: white;
-  font-size: 15px;
-  position: absolute;
-  top: 38%;
-  transition: 0.6s ease;
-  text-indent: -9999px;
-}
-
-#prev::before {
+.slick-prev::before {
   content: '\f053';
   font-family: FontAwesome;
   float: left;
   opacity: 0.5;
   text-indent: 0;
+  transition: all .3s ease;
 }
-#next::before {
+.slick-next::before {
   content: '\f054';
   font-family: FontAwesome;
   float: right;
   opacity: 0.5;
   text-indent: 0;
+  transition: all .3s ease;
 }
 
-#prev { left: 6.2%; }
-#next { right: 6.2%; }
+.slick-prev {
+  z-index: 1; 
+  left: 6.2%;
+ }
 
- /*=================================
+.slick-next { right: 6.2%; }
+
+/*=================================
   Banner styling ends here
 =================================*/ 
 
@@ -297,7 +324,7 @@ h1 img { width: 40%; }
 }
 
 .welcome h2 {
-  padding-top: 41px;
+  padding-top: 63px;
   margin-bottom: 35px;
   color: #444;
   font: 600 18px sans-serif;
@@ -330,21 +357,21 @@ h1 img { width: 40%; }
   text-transform: uppercase;
 }
 
-.serivces {
+.services {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 24px;
 }
 
-.serivces li {
+.services li {
   cursor: pointer;
   transition: all .4s ease-in-out;
 }
 
-.serivce { flex-basis: 20%; }
-.serivce:nth-child(5) figure { margin: 20px 0 17px; }
+.service { flex-basis: 20%; }
+.service:nth-child(5) figure { margin: 20px 0 17px; }
 
-.serivce span {
+.service span {
   padding: 13px;
   padding-top: 20px;
   margin-bottom: 21px;
@@ -355,20 +382,20 @@ h1 img { width: 40%; }
   text-transform: uppercase;
 }
 
-.serivce img { width: 57%; }
+.service img { width: 57%; }
 
-.serivce-icon  {
+.service-icon  {
   margin-left: 5%;
   display: flex;
   flex-direction: column;
 }
 
-.serivce-icon a {
+.service-icon a {
   margin-top: 38px;
   text-indent: -9999px;
 }
 
-.serivce-icon a:before {
+.service-icon a:before {
   content: "\f061";
   margin-right: 33px;
   color: var(--primary-color);
@@ -378,7 +405,7 @@ h1 img { width: 40%; }
   text-indent: 0;
 }
 
-.serivce-icon span {
+.service-icon span {
   margin-top: 36px;
   color: #777;
   display: block;
@@ -505,10 +532,27 @@ h1 img { width: 40%; }
 }
 
 .show { display: flex; }
+.block { display: block; }
+.hide { display: none; }
 .no-scroll { overflow: hidden; }
 .close:before { transform: rotate(45deg); }
 .close:after { transform: rotate(-45deg); }
 
+.opaque { 
+  display: flex;
+  animation-name: fade;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+}
+
+@keyframes fade {
+  from{
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
  /*=================================
   our-latest-work styling ends here
 =================================*/
@@ -628,19 +672,18 @@ form { display: flex; }
 .form-group .error,
 .form-control .error {
   width: 50%;
-  bottom: 50%;
+  bottom: 30%;
   font: 600 14px sans-serif;
-  left: -78%;
+  left: -76%;
   letter-spacing: 1px;
   position: absolute;
-  transform: translateX(50%);
+  transform: translateX(49%);
   visibility: hidden;
 }
 
 .form-control .error  {
   right: -78%;
   transform: translateX(355%);
-  transition: all .3s ease;
 }
 
 .form-group .error::after,
@@ -746,8 +789,90 @@ option { font-size: 14px; }
   float: right;
 }
 
-.visible { visibility: visible;}
+.customAlert {
+  display: none;
+  position: fixed;
+  max-width: 25%;
+  min-width: 250px;
+  min-height: 20%;
+  height: 200px;
+  left: 60%;
+  box-shadow: 8px 3px 10px rgba(0, 0, 0, 0.4);
+  top: 50%;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-left: -12.5%;
+  margin-top: -5.2%;
+  border: 1px solid #fff;
+  background: #FFEFBA;
+  background: linear-gradient(to right, #FFFFFF, #FFEFBA);
+  animation-name: fadeIn;
+  animation-fill-mode: both;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+}
 
+.confirm-button {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 15%;
+  height: 36px;
+  margin: -48px -24px auto -18px;
+  outline: 0;
+  border: 1px solid;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 800;
+  background: linear-gradient(to right, #240b36, #c31432);
+  background: #2b2e37;
+}
+
+.confirm-button::before {
+  content: '';
+  position: absolute;
+  background: #2b2e37;
+  color: #fff;
+  top: 0;
+  width: 18px;
+  float: left;
+  text-indent: 0;
+  display: block;
+  height: 10px;
+}
+
+.message {
+  padding: 57px;
+  color: dimgray;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 23px;
+  text-align: justify;
+}
+
+.fadein {
+  display: block;
+  animation-name: fadeIn;
+  animation-duration: 0.6s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    left: 40%;
+    opacity: 0;
+  }
+
+  to {
+    left: 60%;
+    opacity: 1;
+  }
+}
+
+.form-group .error.visible,
+.form-control .error.visible { visibility: visible;}
+.opacity { opacity: 0.5; }
+.visible { visibility: visible;}
  /*=================================
   get-in-touch styling ends here
 =================================*/ 
@@ -756,9 +881,9 @@ option { font-size: 14px; }
   index main styling ends here
 =================================*/
 
-/*=================================
+/*===================================
   our-works main styling starts here
-=================================*/
+===================================*/
 
 /*=====================================
   our-works banner styling starts here
@@ -798,7 +923,10 @@ option { font-size: 14px; }
 .portfoliolink a {
   color: var(--secondary-color);
   font: 600 9.5px sans-serif;
+  cursor: pointer;
 }
+
+.portfoliolink a.active { color: var(--primary-color); }
 
 .portfoliolink::after {
   content: '/';
@@ -810,10 +938,10 @@ option { font-size: 14px; }
 .portfolio-images {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
-.portfolio-img { max-width: 25%; }
+.portfolio-img { width: 25%; }
 
 .portfolio-img figure {
   max-width: 335px;
@@ -823,6 +951,10 @@ option { font-size: 14px; }
 /*==============================================
   our-works portfolio-filter styling starts here
 ================================================*/
+
+/*=================================
+  our-works banner styling ends here
+=================================*/
 
 /*=================================
   our-works main styling ends here
@@ -835,6 +967,7 @@ option { font-size: 14px; }
 /*=================================
   join us banner styling starts here
 =================================*/
+
 
 .join-us-banner {
   padding: 159px;
@@ -877,9 +1010,9 @@ option { font-size: 14px; }
   transition: all .3s ease;
 }
 
-/*=========================================
-  join us harvest history styling ends here
-==========================================*/
+/*=================================
+  join us banner styling ends here
+=================================*/
 
 /*=====================================
   join us harvester styling starts here
@@ -1057,7 +1190,6 @@ option { font-size: 14px; }
   border-radius: 4px;
   box-shadow: 3px 3px 5px 0 rgba(0,0,0,.04);
   background: #fff;
-  display: flex;
   justify-content: space-between;
   font-size: 10px;
   letter-spacing: 1px;
@@ -1067,8 +1199,10 @@ option { font-size: 14px; }
 }
 
 .job-details {
+  width: 50%;
   display: flex;
   justify-content: flex-end;
+  float: right;
   flex-basis: 50%;
 }
 
@@ -1078,8 +1212,6 @@ option { font-size: 14px; }
   cursor: pointer;
   font-weight: 600;
 }
-
-.timing { padding: 0 3%; }
 
 .job-cat::before ,
 .more-details::after ,
@@ -1091,9 +1223,16 @@ option { font-size: 14px; }
 
 .job-cat::before  { content: "\f1ad"; }
 .timing::before { content: "\f042"; }
+
 .more-details,
 .timing,
-.job-cat { font-size: 8.8px; }
+.job-cat { 
+  display: inline-block;
+  font-size: 8.8px;
+ }
+
+ .timing { padding: 0 10px; }
+
 
 .more-details::after { 
   content: "\002192";
@@ -1171,9 +1310,9 @@ footer h5 {
 
 .getintouch a::before,
 .getintouch address::before {
-  position: absolute;
   float: left;
-  font-family: "fontAwesome";
+  font-family: "fontAwesome"; 
+  position: absolute;
   left: -15px;
   text-indent: 0;
 }
@@ -1208,9 +1347,362 @@ footer p { margin: 30px 0 40px; }
 =================================*/ 
 
 /*media query starts*/
+/*media query for hovers starts here*/
+/*media query for 1024px starts here*/
+@media only screen and (min-width: 1024px) {
+  .angle-right:hover {
+    background: var(--primary-color);
+    color: #fff;
+    transition: all .3s ease;
+  }
+
+  .slick-prev:hover::before,
+  .slick-next:hover::before { 
+    color: var(--primary-color);
+    opacity: 1;
+  }
+
+  .services li:hover {
+    transform: scale(1.1);
+    transition: all ease-in-out;
+  }
+
+  .portfolio figure:hover img {
+    transform: scale(1.2);
+    transition: all .5s ease-in-out;
+  }
+  
+  .portfolio figure:hover::before {
+    content: "";
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    bottom: 0;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    transition: all .4s ease-in-out;
+    z-index: 1;
+  }
+
+  .portfolio figure:hover::after {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+
+  #submit:hover {
+    background: #fff;
+    color: var(--primary-color);
+  }
+
+  .harvest-history a:hover {
+    background: var(--primary-color);
+    color: #fff;
+  }
+
+  .harvest-value:hover {
+    transform: rotate3d(360, 1, 1, 360deg);
+    transition: all 2s ease;
+  }
+
+  .header-social-icons .facebook:hover::before,
+  .header-social-icons .twitter:hover::before,
+  .header-social-icons .instagram:hover::before,
+  .header-social-icons .linkedin:hover::before { color: #444; }
+  .navigation a:hover,
+  .our-latest-work a:hover,
+  .services li:hover span,
+  footer a:hover,
+  .footer-social-icons .facebook:hover::before,
+  .footer-social-icons .twitter:hover::before,
+  .footer-social-icons .instagram:hover::before,
+  .footer-social-icons .linkedin:hover::before { color: var(--primary-color); } 
+  .close:hover { opacity: 1; }
+  #TermsandCondition + label a:hover { color: #777; }
+  .partners figure:hover { box-shadow: 14px -14px 15px -4px rgba(25,25,25,0.4), 9px 23px 18px -14px rgba(25,25,25,0.6) }
+}
+
 /*media query for 995px starts here*/
 @media only screen and (max-width: 995px) {
+  .navigation li:nth-of-type(odd),
+  .navigation li:nth-of-type(even) { margin-right: 1%; }
+  .header-social-icons { width: 10%; }
+  .service-icon {margin: 0;}
+  .get-in-touch .wrapper { width: 70%; }
+  .wrapper { width: 86%; }
+  #TermsandCondition + label a:last-of-type { margin-left: 1%; }
+  #job-categories  { width: 20%; }
+  .more-details, .timing, .job-cat { width: 15%; }
+  .perk { flex-basis: 40%; }
+  .join-us-banner,
+  .our-works-banner { background-position: center; }
+  .portfolio-images { justify-content: space-evenly; }
+  .portfolio-img { width : 30%; }
+  form { flex-direction: column;}
+  .lightbox { width: 40%; }
+  .form-groups, .form-controls { width: 100%; }
+  .form-controls { margin-left: 0; }
+  .banner-slider .desktop { display: none; }
+  .banner-slider .mobile { display: block; }
+  .values { flex-wrap: wrap;  }
+  form { width: 75%;}
+  .form-group .error::after,
+  .form-control .error::before { float: left; }
 
+  .form-group .error ,
+  .form-control .error {
+    width: 50%;
+    bottom: 24%;
+    font: 600 14px sans-serif;
+    left: 76%;
+    letter-spacing: 1px;
+    position: absolute;
+    transform: translateX(49%);
+  }
 
+  .angle-right {
+    padding: 8.5px; 
+    right: 38%;
+  }
 
-}  
+  .harvest-value {
+    width: 48%;
+    margin: 0 0 20px;
+  }
+}
+
+/*media query for 767px starts here*/
+@media only screen and (max-width: 767px) {
+  .header-social-icons { display: none; }
+  .navigation { display: none; }
+  .opportunities h4 { margin: 10%; } 
+  .opportunities .wrapper { width: 80%; }
+  #job-categories  { width: 25%; }
+  .job { padding: 7px 8px; }
+  .slider-content p { font-size: 12px;}
+  .slider-content span { font-size: 10px;}
+  .angle-right::after { font-size: 8px; }
+  .service { flex-basis: 33%;}
+  .service-icon { margin: 0 auto;}
+  .portfolios { flex-wrap: wrap;}
+  .portfolio { width: 50%; }
+  .client { width: 31%; }
+  .client:last-of-type { margin: 0 auto;}
+  .affiliated-partners { justify-content: flex-start; }
+  footer h5,
+  .getintouch ul,
+  .information ul { text-align: unset; }
+  .getintouch .infoMail::before { left: -25px; }
+  .getintouch .telephone::before::before { left: 25px; }
+  .portfoliolink a { font: 600 12.5px sans-serif; }
+  .portfolio-img { width: 82%; }
+  .harvester-content { flex-direction: column-reverse; }
+  .benefits { justify-content: center; }
+  .perk figure { width: 20%; }
+  .perk span { padding: 15px 0; }
+  .values { justify-content: center; }
+  .harvest-value { width: 50%; }
+  nav { width: 40px; }
+  .hamburger { display: block; }
+  .header-social-icons .facebook::before,
+  .header-social-icons .twitter::before,
+  .header-social-icons .instagram::before,
+  .header-social-icons .linkedin::before { font-size: 20px;}  
+  .navigation a { font-size: 12px;}
+  form { width: 80%;}
+  .portfolios-links { margin: 10%; }
+  .lightbox { width: 50%; }
+
+  .nav-active {
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 44px;
+    left: 0px;
+    z-index: 2;
+  }
+
+  .social-active {
+    width: 39%;
+    display: flex;
+    position: absolute;
+    bottom: 10%;
+    left: 30%;
+    z-index: 2;
+  }
+
+  .services { 
+    margin-bottom: 24px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .job > span {
+    margin-top: 14px;
+    display: inline-block;
+  } 
+
+  .job-details {
+    width: 50%;
+    margin-top: 14px;
+    display: flex;
+    justify-content: flex-end;
+    flex-basis: 50%;
+    float: right;
+  }
+
+  .more-details, .timing, .job-cat {
+    width: 100%;  
+    display: inline-block;
+  }
+  
+  .partners { 
+    width: 28%;
+    margin: 10px;
+  }
+  
+  .angle-right {
+    margin: 19px 0;
+    font-size: 8px;
+    right: 38%;
+  }
+
+  .company-info {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .information { 
+    width: 100%;
+    margin-left: 0; 
+  }
+
+  .portfolio-img figure { 
+    width: 100%;
+    max-width: none;
+   }
+
+  .harvester-content p,
+  .harvester-content figure { 
+    width: 100%; 
+    padding-bottom: 10px;
+  }
+
+  .perk {
+    margin: 24 0;
+    border-bottom: 1px solid #ddd;
+    align-items: center;
+    flex-basis: 51%;
+    flex-direction: column;
+  }
+}
+
+/*media query for 540px starts here*/
+@media only screen and (max-width: 540px) {
+  #job-categories  { width: 30%;}
+  .job { padding: 7px 8px;}
+  .opportunities .wrapper,
+  .portfolio,
+  form { width: 100%;}
+  .service { flex-basis: 45%; }
+  .client { width: 45%;}
+  .partners {
+    width: 45%;
+    margin: 5px;
+  }
+
+  .job > span {
+    margin-top: 14px;
+    display: inline-block;
+  } 
+
+  .form-group,
+  .form-control { margin: 50px 0; }
+  .form-control:first-of-type { margin-top: 0; }
+  .form-group .error,
+  .form-control .error {
+    width: 100%;
+    bottom: -25%;
+    font: 600 14px sans-serif;
+    left: 100%;
+    letter-spacing: 1px;
+    position: absolute;
+    transform: translateX(-100%);
+  }
+  .form-group .error::after {transform: translate(-32px, -64px); } 
+  .form-control:nth-child(2) .error { bottom: -65%; }
+  .form-control .error::before ,
+  .form-control .success::after { transform: translate(-25px, -50px); }
+  .lightbox { width: 80%; }
+
+  .success {
+    bottom: 35%;
+    left: -10%;
+  }
+
+  .job-details {
+    width: 50%;
+    margin-top: 14px;
+    display: flex;
+    justify-content: flex-end;
+    flex-basis: 50%;
+    float: right;
+  }
+  .more-details, .timing, .job-cat { 
+    width: 100%; 
+    display: inline-block;
+  }
+}
+
+/*media query for 320px starts here*/
+@media only screen and (max-width: 320px) {
+  .jobs { margin: 20px 5%; }
+  .job > span { width: 45%; }
+  .job-cat::before ,
+  .more-details::after ,
+  .timing::before { margin-bottom: 5px; } 
+  .service { flex-basis: 100%; }
+  .client { width: 100%;}
+  .lightbox { width: 90%; }
+  .success { left: -17%;}
+  .customAlert { left: 25%; }
+  .form-control .success { left: -5%; }
+
+  @keyframes fadeIn {
+    from {
+      left: 0;
+      opacity: 0;
+    }
+  
+    to {
+      left: 25%;
+      opacity: 1;
+    }
+  }
+
+  .partners {
+    width: 100%;
+    margin: 10px;
+  }
+
+  .form-group .error,
+  .form-control .error {
+    width: 100%;
+    bottom: -35%;
+    font: 600 14px sans-serif;
+    left: 100%;
+    letter-spacing: 1px;
+    position: absolute;
+    transform: translateX(-100%);
+  }
+
+  .more-details, .timing, .job-cat {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+   }
+}
