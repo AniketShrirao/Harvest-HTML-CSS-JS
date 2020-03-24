@@ -284,7 +284,7 @@ function JoinUsPage() {
 	selectedOption.addEventListener('change',selectFilter);
 	function selectFilter() {
 		jobs.forEach(function(job) {
-			if (job.data-val === selectedOption.value || selectedOption.value === "All Job Category" ) {
+			if (job.dataset.val === selectedOption.value || selectedOption.value === "All Job Category" ) {
 				Category[i].classList.remove('hide');
 				Category[i].classList.add('show');
 			} else {
