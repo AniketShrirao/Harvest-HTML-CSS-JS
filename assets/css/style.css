@@ -1574,9 +1574,8 @@ footer p { margin: 30px 0 40px; }
   .perk { flex-basis: 40%; }
   .join-us-banner,
   .our-works-banner { background-position: center; }
-  .portfolio-images { -webkit-box-pack: space-evenly; justify-content: space-evenly; }
+  .portfolio-images { -webkit-box-pack: flex-start; justify-content: flex-start; }
   .portfolio-img { width : 30%; }
-  form { -webkit-box-orient: vertical; -webkit-box-direction: normal; flex-direction: column;}
   .lightbox { width: 40%; }
   .form-groups, .form-controls { width: 100%; }
   .form-controls { margin-left: 0; }
@@ -1586,6 +1585,12 @@ footer p { margin: 30px 0 40px; }
   form { width: 75%;}
   .form-group .error::after,
   .form-control .error::before { float: left; }
+
+  form { 
+  -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+  }
 
   .form-group .error ,
   .form-control .error {
@@ -1635,7 +1640,6 @@ footer p { margin: 30px 0 40px; }
   .getintouch .telephone::before { left: -25px; }
   .portfoliolink a { font: 600 12.5px sans-serif; }
   .portfolio-img { width: 82%; }
-  .harvester-content { -webkit-box-orient: vertical; -webkit-box-direction: reverse; flex-direction: column-reverse; }
   .benefits { -webkit-box-pack: center; justify-content: center; }
   .perk figure { width: 20%; }
   .perk span { padding: 15px 0; }
@@ -1651,6 +1655,12 @@ footer p { margin: 30px 0 40px; }
   form { width: 80%;}
   .portfolios-links { margin: 10%; }
   .lightbox { width: 50%; }
+
+  .harvester-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    flex-direction: column-reverse; 
+  }
 
   .nav-active {
     width: 100%;
@@ -1789,11 +1799,26 @@ footer p { margin: 30px 0 40px; }
     -webkit-transform: translateX(-100%);
             transform: translateX(-100%);
   }
-  .form-group .error::after {-webkit-transform: translate(-32px, -64px);transform: translate(-32px, -64px); } 
+
   .form-control:nth-child(2) .error { bottom: -65%; }
-  .form-control .error::before ,
-  .form-control .success::after { -webkit-transform: translate(-25px, -50px); transform: translate(-25px, -50px); }
   .lightbox { width: 80%; }
+
+  .form-group .error::after {
+    -webkit-transform: translate(-32px, -64px); 
+    transform: translate(-32px, -64px);
+    -moz-transform: translate(-32px, -64px);
+    -ms-transform: translate(-32px, -64px);
+    -o-transform: translate(-32px, -64px);
+  } 
+
+  .form-control .error::before ,
+  .form-control .success::after {
+    -webkit-transform: translate(-25px, -50px);
+    transform: translate(-25px, -50px);
+    -moz-transform: translate(-25px, -50px);
+    -ms-transform: translate(-25px, -50px);
+    -o-transform: translate(-25px, -50px);
+  }
 
   .success {
     bottom: 35%;
